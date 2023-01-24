@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+<label> mensaje:</label>
+<input name="string1" type="text">
+<button name="btn-encriptar">Encriptar</button>
+
+<label> mensaje encriptado:</label>
+<input name="string2" type="text">
+<button name="btn-desencriptar">Desencriptar</button>
+<script>
+
+	
+	input= document.querySelector('[name="string1"]');
+			input.focus();
+
+	function MyStringLenght(myString){		
+	  myString=input.value;
+	  x = (myString.length);
+	 
+	  var newString="";
+	  for (var i = 0; i<=x; i++){
+	  	if (myString.substr(i,1) == "a"){
+	  		newString= newString+"ai";
+	  	}
+	  	 else if (myString.substr(i,1) == "e"){
+	  		newString= newString+"enter";
+	  	}
+	  	 else if (myString.substr(i,1) == "i"){
+	  		newString= newString+"imes";
+	  	}
+	  	 else if (myString.substr(i,1) == "o"){
+	  		newString= newString+"ober";
+	  	}
+	  	 else if (myString.substr(i,1) == "u"){
+	  		newString= newString+"ufat";
+	  	}
+	  	 else {
+	  	 	newString= newString+myString.substr(i,1);
+	  	 }
+
+	  }
+	  document.write(newString);
+	}
+
+	function MyStringLenght2(myString){		
+	  myString=input.value;
+	  var newString="";
+	 
+	   newString=myString2.replace(/ai/g,"a");
+	   newString=newString2.replace(/enter/g,"e");
+	   newString=newString2.replace(/imes/g,"i");
+	   newString=newString2.replace(/ober/g,"o");
+	   newString=newString2.replace(/ufat/g,"u");
+	  document.write(newString);
+	}
+
+	var button=document.querySelector('[name="btn-encriptar"]');
+	button.onclick=MyStringLenght;
+
+	var button=document.querySelector('[name="btn-desencriptar"]')
+	button.onclick=MyStringLenght2;
+
+</script>
