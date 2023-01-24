@@ -2,12 +2,8 @@
 <label> mensaje:</label>
 <input name="string1" type="text">
 <button name="btn-encriptar">Encriptar</button>
-
-<label> mensaje encriptado:</label>
-<input name="string2" type="text">
 <button name="btn-desencriptar">Desencriptar</button>
 <script>
-
 	
 	input= document.querySelector('[name="string1"]');
 			input.focus();
@@ -44,13 +40,14 @@
 	function MyStringLenght2(myString){		
 	  myString=input.value;
 	  var newString="";
-	 
-	   newString=myString2.replace(/ai/g,"a");
-	   newString=newString2.replace(/enter/g,"e");
-	   newString=newString2.replace(/imes/g,"i");
-	   newString=newString2.replace(/ober/g,"o");
-	   newString=newString2.replace(/ufat/g,"u");
+	   
+	   newString=myString.replaceAll("enter","e");
+	   newString=newString.replaceAll("imes","i");
+	   newString=newString.replaceAll("ai","a");
+	   newString=newString.replaceAll("ober","o");
+	   newString=newString.replaceAll("ufat","u");
 	  document.write(newString);
+	  
 	}
 
 	var button=document.querySelector('[name="btn-encriptar"]');
