@@ -1,0 +1,117 @@
+body{
+    background-image: url("milk.jpg");
+    
+  }
+  main{
+    padding-top: 5px;
+  }
+  .logo{
+    width: 50px;
+    height: 50px;
+  }
+  .demo{
+    font-style: italic;
+    color: white;
+    position: absolute;
+    width: 200px;
+    background-color: black;
+    
+   
+  }
+.caja-texto{
+    background:#E9ECF8;
+    border-style: none;
+}
+.aviso{
+    font-size: 16px;
+    color: grey;
+}
+
+.button-container{
+    padding: 40px  40px;
+    width: 940px;
+    margin:auto;
+   
+}
+button{
+    border-radius: 32px;
+    width: 205px;
+    height: 40px;
+    background-color: black;
+    color: white ;
+}
+
+.box{
+    width: 940px;
+    padding: 50px;
+  margin-top: 10px;
+    
+}
+.container{
+    display: inline-block;
+    vertical-align: top;
+    width: 700px;
+    height: 300px;
+    margin:0 1.5%;
+    border:2px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    
+}
+.container2{
+    display: inline-block;
+    vertical-align: top;
+    width: 240px;
+    height: 300px;
+   
+    border:2px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 30px 30px;
+    
+}
+header {
+    padding:30px 30px;
+    
+}
+.img-muneco{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.5;
+   
+}
+
+footer{
+    text-align: center;
+   
+    padding-top: 20px;
+    height: 30px;
+}
+
+.copyright{
+    color:white;
+    font-size: 13px;
+    margin: 10px;
+
+}
+
+
+
+.btn:hover{
+    background: lightskyblue;
+    cursor: pointer;
+    color: black;
+}
+
+.caja-texto{
+    font-style: courier;
+    background-color: black;
+    color:white;
+   
+    
+}
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap'); </style>
+    </head>
+    <body>
+        
+            <header>
+                <img class="logo" src="logo3.jpg" alt="logo Alura">
+            </header>
+            <main>
+             <div class="box>">
+                    <div class="container">
+                        
+                        <input id="string1" name="string1" class="caja-texto" type="textarea" placeholder="introduce el texto aqui">
+                    </div> 
+                    <div class="container2">
+                        <textarea name="demo" id="demo" class="demo"></textarea> 
+                        <img class="img-muneco" src="muneco.png" alt="imagen buscador">      
+                    </div>          
+            </div>
+                
+            <div class="button-container">
+                        <p class="aviso"><img src="bi_exclamation-circle-fill.png"> solo letras minusculas y sin acentos</p>
+                        <button name="btn-encriptar" class="btn">Encriptar</button>                         
+                        <button name="btn-desencriptar" class="btn">Desencriptar</button>
+
+                        <button id="bnt-c" name="btn-copiar" class="btn" style="margin-left:150px">Copiar</button>
+                                                            
+             </div>
+            </main>
+            <footer>
+               <p class="copyright">&copy Copyright Mauro Escobedo 2023</p>;
+            </footer>
+            <script>
+	
+                input= document.querySelector('[name="string1"]');
+               
+                input.focus();
+    
+                function MyStringLenght(myString){		
+                  myString=input.value;
+                  
+                  x = (myString.length);
+         
+                  var newString="";
+                  for (var i = 0; i<=x; i++){
+                      if (myString.substr(i,1) == "a"){
+                          newString= newString+"ai";
+                      }
+                       else if (myString.substr(i,1) == "e"){
+                          newString= newString+"enter";
+                      }
+                       else if (myString.substr(i,1) == "i"){
+                          newString= newString+"imes";
+                      }
+                       else if (myString.substr(i,1) == "o"){
+                          newString= newString+"ober";
+                      }
+                       else if (myString.substr(i,1) == "u"){
+                          newString= newString+"ufat";
+                      }
+                       else {
+                           newString= newString+myString.substr(i,1);
+                       }
+    
+                  }
+                  
+                  
+                  document.getElementById("demo").innerHTML = newString;
+                  limpiar=document.querySelector('[name="string1"]');
+                  limpiar.select();
+                  limpiar.innerHTML="";
+                  
+            }
+    
+            function copiar() {
+            // Get the text field
+            var copyText = document.getElementById("demo");
+            
+  
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+  
+             // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+  
+                copyText.innerHTML="";
+            }
+    
+        function MyStringLenght2(myString){		
+          myString=input.value;
+          var newString="";
+           
+           newString=myString.replaceAll("enter","e");
+           newString=newString.replaceAll("imes","i");
+           newString=newString.replaceAll("ai","a");
+           newString=newString.replaceAll("ober","o");
+           newString=newString.replaceAll("ufat","u");
+           input.innerHTML="";
+           input
+           document.getElementById("demo").innerHTML = newString;
+
+           
+        }
+    
+        var button=document.querySelector('[name="btn-encriptar"]');
+        button.onclick=MyStringLenght;
+    
+        var button=document.querySelector('[name="btn-desencriptar"]')
+        button.onclick=MyStringLenght2;
+    
+        var button=document.querySelector('[name="btn-copiar"]')
+        button.onclick=copiar;
+    </script>
+    </body>
+</html>
